@@ -16,11 +16,14 @@ class CarOwner
   def list_of_cars
     Car.all.select {|car| car.carowner == self}
   end 
-
+  
   #Get a list of all the mechanics that a specific owner goes to
   def list_of_mechanics
     list_of_cars.map{|car| car.mechanic}
-  end 
+  end
+  
+  #cars = Cars.all.select {|car| car.owner == self}
+  #mechanics = cars.map {|car| car.mechanic}
 
   #Get the average amount of cars owned for all owners
   def self.average_cars_owned

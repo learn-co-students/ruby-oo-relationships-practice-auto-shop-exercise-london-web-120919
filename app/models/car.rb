@@ -24,7 +24,7 @@ class Car
   end 
 
   def self.car_classification
-    Car.all.map {|car| car.classification}
+    Car.all.map {|car| car.classification}.uniq
   end 
 
 end
