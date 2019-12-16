@@ -23,4 +23,8 @@ class Car
     Mechanic.all.select{|mechanic| mechanic.specialty == self.classification}
   end 
 
+  def self.car_classification
+    Car.all.map {|car| car.classification}
+  end 
+
 end
